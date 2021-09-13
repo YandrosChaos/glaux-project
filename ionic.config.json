@@ -1,0 +1,7 @@
+{
+  "name": "glaux-project",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
