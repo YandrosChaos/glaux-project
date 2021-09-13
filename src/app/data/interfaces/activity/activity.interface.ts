@@ -4,12 +4,13 @@ import { Resource } from './resource.interface';
 
 export interface Activity extends AbstractModel{
     name: string;
-    recommendedAge: string;
-    duration: number;
+    recommendedAges: number[];
+    minutes: number;
+    imgLink: string;
     learningAreas: string[];
     objectives: Objective[];
     resources: Resource[];
     teacherRole: string;
-    description: string;
+    description: string[];
     variations: string[];
 }
