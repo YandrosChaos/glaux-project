@@ -3,6 +3,7 @@ import { Objective } from './objective.interface';
 import { Resource } from './resource.interface';
 
 export interface Activity extends AbstractModel{
+    type: string;
     name: string;
     recommendedAges: number[];
     minutes: number;

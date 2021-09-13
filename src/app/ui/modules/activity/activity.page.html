@@ -1,1 +1,13 @@
-<p>Here we are!</p>
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Actividades</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+    <ion-card class='card' *ngFor="let activity of activities">
+            <div class='card-title'>{{activity.name}}</div>
+            <div class='card-subtitle'>{{activity.type}}</div>
+            <img class="card-img" src="{{activity.imgLink}}" alt="image">
+    </ion-card>
+</ion-content>

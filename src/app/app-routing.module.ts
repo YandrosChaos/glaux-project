@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./ui/ui.module').then( m => m.UIModule)
+    loadChildren: () => import('./ui/modules/activity/activity.module').then( m => m.ActivityModule)
   },
   {
     path: '',
