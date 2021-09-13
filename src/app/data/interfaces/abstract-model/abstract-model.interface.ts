@@ -1,3 +1,4 @@
 export interface AbstractModel{
-    hash: string;
+    hash?: string;
+    user?: string;
 }
