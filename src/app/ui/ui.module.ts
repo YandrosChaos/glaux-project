@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { UIPage } from './ui.page';
 import { UIRoutingModule } from './ui-routing.module';
 
 @NgModule({
@@ -12,6 +11,6 @@ import { UIRoutingModule } from './ui-routing.module';
     IonicModule,
     UIRoutingModule
   ],
-  declarations: [UIPage]
+  declarations: []
 })
 export class UIModule {}
