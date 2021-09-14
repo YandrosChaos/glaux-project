@@ -148,7 +148,7 @@ export const testData: Activity[] = [
             description:'pequeños troncos'
         }],
         teacherRole:
-        `EEl maestro es mero observador y no debe de intervenir salvo que sea necesario siendo una actividad no dirigida`,
+        `El maestro es mero observador y no debe de intervenir salvo que sea necesario siendo una actividad no dirigida`,
         description:[
             `Se creará una instalación con elementos otoñales. para ello se colocaran en una sala, en la que no estén los niños, 
             distintos objetos cuidando siempre de la estética intentando hacerlo lo más atractivo posible.`,

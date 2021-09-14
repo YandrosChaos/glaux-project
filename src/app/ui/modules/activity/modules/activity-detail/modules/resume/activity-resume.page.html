@@ -1,0 +1,6 @@
+<div *ngIf="activity">
+    <ion-img src="{{activity.imgLink}}"></ion-img>
+    <div class="ion-margin ion-text-justify">
+        <p *ngFor="let paragraph of activity.description">{{paragraph}}</p>
+    </div>
+</div>

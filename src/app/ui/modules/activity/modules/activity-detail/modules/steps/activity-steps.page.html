@@ -1,0 +1,12 @@
+<ion-list>
+    <ion-item *ngFor="let paragraph of activity.description; let indx = index"
+    class="ion-text-justify">
+    <ion-avatar slot="start">
+        <img src="{{activity.imgLink}}">
+      </ion-avatar>
+    <ion-label>
+        <h2>Paso {{indx+1}}</h2>
+        <p>{{paragraph}}</p>
+    </ion-label>
+    </ion-item>
+</ion-list>

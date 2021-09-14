@@ -1,0 +1,22 @@
+<div *ngIf='activity'>
+    <ion-item>
+          <ion-label class='ion-text-center'>
+            <h1>Metodologia</h1>
+            <h2>Ambito: {{activity.type}}</h2>
+        </ion-label>
+    </ion-item>
+    <div class='ion-padding'>
+        <h3>Objetivos</h3>
+        <ul>
+            <li *ngFor='let objective of activity.objectives'>
+                {{objective.description}}
+            </li>
+        </ul>
+        <h3>Materiales</h3>
+        <ul>
+            <li *ngFor='let resource of activity.resources'>
+                {{resource.description}}
+            </li>
+        </ul>
+    </div>
+</div>
