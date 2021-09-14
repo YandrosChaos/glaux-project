@@ -3,12 +3,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'activity',
     loadChildren: () => import('./ui/modules/activity/activity.module').then( m => m.ActivityModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'activity',
     pathMatch: 'full'
   },
 ];

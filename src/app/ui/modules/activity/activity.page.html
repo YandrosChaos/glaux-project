@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content class="card-background-page">
-    <ion-card class='card' *ngFor="let activity of activities">
+    <ion-card class='card' *ngFor="let activity of activities" (click)="onNavigate(activity)">
             <div class='card-title'>{{activity.name}}</div>
             <div class='card-subtitle'>{{activity.type}}</div>
             <img class="card-img" src="{{activity.imgLink}}" alt="image">
