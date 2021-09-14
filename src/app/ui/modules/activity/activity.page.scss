@@ -2,11 +2,12 @@
     margin-left: 0;
     margin-right: 0;
     .card-img{
-        filter:brightness(50%);
+        filter:brightness(70%);
     }
     .card{
         position: relative;
         text-align: center;
+        box-shadow: none !important;
     }
     .card-title{
         font-size: 2.5rem;

@@ -5,6 +5,7 @@ import { Resource } from './resource.interface';
 export interface Activity extends AbstractModel{
     type: string;
     name: string;
+    methodology: ActivityMethodologyEnum,
     recommendedAges: number[];
     minutes: number;
     imgLink: string;
@@ -14,4 +15,10 @@ export interface Activity extends AbstractModel{
     teacherRole: string;
     description: string[];
     variations: string[];
+}
+
+export enum ActivityMethodologyEnum{
+    guided = "Dirigida",
+    semiGuided = "Semi-dirigida",
+    noGuided = "No Dirigida"
 }

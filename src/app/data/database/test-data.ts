@@ -1,4 +1,4 @@
-import { Activity } from '../interfaces/activity/activity.interface';
+import { Activity, ActivityMethodologyEnum } from '../interfaces/activity/activity.interface';
 import { ObjectiveTypeEnum } from '../interfaces/activity/objective.interface';
 import { ResourceTypeEnum } from '../interfaces/activity/resource.interface';
 
@@ -6,6 +6,7 @@ export const testData: Activity[] = [
     {
         hash:'abc',
         type:"Contenidos Académicos",
+        methodology: ActivityMethodologyEnum.guided,
         name: 'La Rayuela',
         recommendedAges: [3],
         minutes: 30,
@@ -57,6 +58,7 @@ export const testData: Activity[] = [
     {
         hash:'def',
         type:"Plástica",
+        methodology: ActivityMethodologyEnum.noGuided,
         name: 'La Familia Gallina',
         recommendedAges: [3],
         minutes: 60,
@@ -101,6 +103,7 @@ export const testData: Activity[] = [
     {
         hash:'qwe',
         type:"Motricidad",
+        methodology: ActivityMethodologyEnum.semiGuided,
         name: 'Llega el Otoño',
         recommendedAges: [2,3,4,5],
         minutes: 60,

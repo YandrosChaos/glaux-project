@@ -1,11 +1,13 @@
-<div *ngIf='activity'>
+<ion-content *ngIf='activity'>
     <ion-item>
           <ion-label class='ion-text-center'>
-            <h1>Metodologia</h1>
-            <h2>Ambito: {{activity.type}}</h2>
+            <h2>Actividad</h2>
+            <h1>{{activity.methodology}}</h1>
         </ion-label>
+        <ion-icon name="people-outline" slot="start"></ion-icon>
     </ion-item>
     <div class='ion-padding'>
+        <p>Ambito: {{activity.type}}</p>
         <h3>Objetivos</h3>
         <ul>
             <li *ngFor='let objective of activity.objectives'>
@@ -19,4 +21,4 @@
             </li>
         </ul>
     </div>
-</div>
+</ion-content>
