@@ -2,9 +2,10 @@
     margin-left: 0;
     margin-right: 0;
     .card-img{
-        filter:brightness(70%);
+        filter: brightness(70%) opacity(30%) grayscale(100%);
     }
     .card{
+        padding: 0;
         position: relative;
         text-align: center;
         box-shadow: none !important;
@@ -15,17 +16,17 @@
         top: 40%;
         width: 100%;
         z-index: 10;
-        color: var(--ion-color-primary);
+        color: var(--ion-color-secondary);
         font-weight: bold;
     }
     .card-subtitle{
         text-align: end;
-        font-size: 1.5rem;
+        font-size: 1.0rem;
         position: absolute;
         right: 5%;
         bottom: 5%;
         width: 100%;
         z-index: 10;
-        color: var(--ion-color-primary-contrast);
+        color: var(--ion-color-secondary-contrast);
     }
 }

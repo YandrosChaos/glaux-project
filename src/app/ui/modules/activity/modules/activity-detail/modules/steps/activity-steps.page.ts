@@ -12,7 +12,7 @@ export class ActivityStepsPage implements OnInit {
   public activity: Activity;
 
   constructor(
-    private router:Router,
+    private router: Router,
     private activatedRoute: ActivatedRoute,
     private modalController: ModalController,
   ) { }
@@ -25,11 +25,12 @@ export class ActivityStepsPage implements OnInit {
     });
   }
 
-  public async presentModal(step: string): Promise<void>{
+  public async presentModal(index: number, step: string): Promise<void> {
     const modal = await this.modalController.create({
       component: ActivityStepDetailPage,
       componentProps: {
-        step: step
+        step: step,
+        position: index + 1
       }
     });
     return await modal.present();

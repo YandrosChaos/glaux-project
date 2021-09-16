@@ -1,19 +1,24 @@
 <ion-header>
     <ion-toolbar>
-      <ion-title>Ionic Modal Popup Example</ion-title>
+      <ion-title color="primary">Paso {{position}}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)='close()'>
+          <ion-icon name="close-circle-outline" color="danger"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
   
   <ion-content>
     <ion-grid>
       <ion-row>
-        <ion-col text-center>
-          Model Title
+        <ion-col class="ion-text-center">
+          <ion-icon name="help-outline" style="font-size: 15rem;"></ion-icon>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col text-center>
-          <ion-button (click)='close()'>Close</ion-button>
+        <ion-col class="ion-text-justify">
+          {{step}}
         </ion-col>
       </ion-row>
     </ion-grid>

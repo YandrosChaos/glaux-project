@@ -13,6 +13,7 @@ export class ActivityPage implements OnInit, OnDestroy {
   private subActivity: Subscription
 
   public activities: Activity[];
+  public isSearching: boolean = false;
 
   constructor(
     private activityService: ActivityService,
@@ -23,6 +24,10 @@ export class ActivityPage implements OnInit, OnDestroy {
     this.subActivity = this.activityService.getAll().subscribe((list: Activity[]) => {
       this.activities = list;
     })
+  }
+
+  public onSearchButtonTouched():void{
+    this.isSearching = !this.isSearching;
   }
 
   public onNavigate(activity: Activity):void{

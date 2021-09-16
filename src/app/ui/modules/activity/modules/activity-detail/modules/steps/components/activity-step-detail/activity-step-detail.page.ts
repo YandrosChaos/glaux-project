@@ -8,6 +8,8 @@ import { Activity } from 'src/app/data/interfaces/activity/activity.interface';
 })
 export class ActivityStepDetailPage implements OnInit {
   @Input() step: string;
+  @Input() position: string;
+  
   public activity: Activity;
 
   constructor(
@@ -15,12 +17,10 @@ export class ActivityStepDetailPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('Im alive!')
   }
 
   public async close(): Promise<void> {
-    const close: string = "Modal Removed";
-    await this.modalController.dismiss(close);
+    await this.modalController.dismiss();
   }
 
 }
