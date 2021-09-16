@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="ion-no-border">
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
             <ion-back-button defaultHref="activity"></ion-back-button>
@@ -9,16 +9,19 @@
 
 <ion-content>
     <ion-tabs>
-        <ion-tab-bar slot="top">
+        <ion-tab-bar slot="top" color="primary">
           <ion-tab-button tab="resume" (click)="onNavigate('resume')">
+            <ion-icon name="document-text-outline"></ion-icon>
             <ion-label>Resumen</ion-label>
           </ion-tab-button>
       
           <ion-tab-button tab="technical" (click)="onNavigate('technical')">
+            <ion-icon name="cog-outline"></ion-icon>
             <ion-label>Tecnico</ion-label>
           </ion-tab-button>
       
           <ion-tab-button tab="steps" (click)="onNavigate('steps')">
+            <ion-icon name="footsteps-outline"></ion-icon>
             <ion-label>Pasos</ion-label>
           </ion-tab-button>
         </ion-tab-bar>

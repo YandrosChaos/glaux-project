@@ -2,7 +2,7 @@
     margin-left: 0;
     margin-right: 0;
     .card-img{
-        filter: brightness(70%) opacity(30%) grayscale(100%);
+        filter: brightness(70%) opacity(30%) grayscale(60%);
     }
     .card{
         padding: 0;
@@ -16,7 +16,7 @@
         top: 40%;
         width: 100%;
         z-index: 10;
-        color: var(--ion-color-secondary);
+        color: var(--ion-color-tertiary-contrast);
         font-weight: bold;
     }
     .card-subtitle{
@@ -27,6 +27,6 @@
         bottom: 5%;
         width: 100%;
         z-index: 10;
-        color: var(--ion-color-secondary-contrast);
+        color: var(--ion-color-tertiary-contrast);
     }
 }

@@ -1,23 +1,27 @@
 <ion-app>
   <ion-menu side="start" menuId="side-drawer-menu" contentId="menuContent">
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>The Glaux Project</ion-title>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-title class="ion-text-center">The Glaux Project</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <div class="ion-text-center">
         <ion-icon class="big-icon" name="git-branch-outline"></ion-icon>
       </div>
-      <ion-list>
-        <ion-item lines="none" [routerLink]="['/activity']">
-          <ion-icon name="accessibility-outline" slot="start"></ion-icon>
-          <ion-label>Actividades</ion-label>
-        </ion-item>
-        <ion-item lines="none" [routerLink]="['/about']">
-          <ion-icon name="information-outline" slot="start"></ion-icon>
-          <ion-label>Sobre nosotros</ion-label>
-        </ion-item>
+      <ion-list class="ion-no-padding">
+        <ion-menu-toggle auto-hide="true">
+          <ion-item lines="none" [routerLink]="['/activity']" routerLinkActive="active-link">
+            <ion-icon name="accessibility-outline" slot="start"></ion-icon>
+            <ion-label>Actividades</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item lines="none" [routerLink]="['/about']" routerLinkActive="active-link">
+            <ion-icon name="information-outline" slot="start"></ion-icon>
+            <ion-label>Sobre nosotros</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>

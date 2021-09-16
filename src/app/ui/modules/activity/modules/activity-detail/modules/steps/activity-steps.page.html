@@ -2,7 +2,7 @@
     <ion-list>
         <ion-item *ngFor="let paragraph of activity.description; let indx = index"
         class="ion-text-justify" (click)='presentModal(indx, paragraph)'>
-        <ion-icon name="footsteps-outline" slot="start"></ion-icon>
+        <ion-icon name="footsteps" slot="start"></ion-icon>
         <ion-label>
             <h2>Paso {{indx+1}}</h2>
             <p>{{paragraph}}</p>
