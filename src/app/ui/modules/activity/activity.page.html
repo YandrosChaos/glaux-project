@@ -6,6 +6,7 @@
         <ion-title *ngIf="!isSearching">Actividades</ion-title>
         <ion-searchbar *ngIf="isSearching"
         (ionCancel)="onSearchButtonTouched()"
+        (ionChange)="onSearchValueChanged($event.detail.value)"
         showCancelButton="always" animated></ion-searchbar>
         <ion-buttons slot="end" *ngIf="!isSearching">
             <ion-button (click)="onSearchButtonTouched()">
@@ -16,7 +17,7 @@
 </ion-header>
 
 <ion-content class="card-background-page">
-    <ion-card class='card' *ngFor="let activity of activities" (click)="onNavigate(activity)">
+    <ion-card class='card' *ngFor="let activity of filteredActivities" (click)="onNavigate(activity)">
             <div class='card-title'>{{activity.name}}</div>
             <div class='card-subtitle'>{{activity.type}}</div>
             <img class="card-img" src="{{activity.imgLink}}" alt="image">

@@ -10,9 +10,10 @@ import { ActivityService } from '../../../data/services/activity/activity.servic
   styleUrls: ['./activity.page.scss']
 })
 export class ActivityPage implements OnInit, OnDestroy {
-  private subActivity: Subscription
+  private subActivity: Subscription;
 
-  public activities: Activity[];
+  private activities: Activity[];
+  public filteredActivities: Activity[];
   public isSearching: boolean = false;
 
   constructor(
@@ -23,19 +24,38 @@ export class ActivityPage implements OnInit, OnDestroy {
   ngOnInit() {
     this.subActivity = this.activityService.getAll().subscribe((list: Activity[]) => {
       this.activities = list;
+      this.filteredActivities = list
     })
   }
 
-  public onSearchButtonTouched():void{
+  public onSearchButtonTouched(): void {
     this.isSearching = !this.isSearching;
   }
 
-  public onNavigate(activity: Activity):void{
+  public onSearchValueChanged(item: string): void {
+    const inputValue: string = this.transformInputValue(item);
+    this.filteredActivities = this.activities.filter(
+      (activity: Activity) =>
+        this.transformInputValue(activity.name)
+          .includes(inputValue)
+        || this.transformInputValue(activity.type)
+          .includes(inputValue)
+    );
+  }
+
+  public onNavigate(activity: Activity): void {
     this.router.navigate(['/activity/detail', activity.hash])
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.subActivity.unsubscribe();
+  }
+
+  private transformInputValue(value: string): string {
+    return value
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
   }
 
 }
