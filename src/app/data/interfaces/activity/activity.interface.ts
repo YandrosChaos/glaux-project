@@ -1,6 +1,7 @@
 import { AbstractModel } from '../abstract-model/abstract-model.interface';
 import { Objective } from './objective.interface';
 import { Resource } from './resource.interface';
+import { Step } from './step.interface';
 
 export interface Activity extends AbstractModel{
     type: string;
@@ -14,6 +15,7 @@ export interface Activity extends AbstractModel{
     resources: Resource[];
     teacherRole: string;
     description: string[];
+    steps: Step[];
     variations: string[];
 }
 

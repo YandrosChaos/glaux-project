@@ -25,6 +25,20 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@font-face {
+    font-family: 'ParkLaneNF';
+    src: url('./assets/fonts/ParkLaneNF.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('./assets/fonts/coolvetica/coolvetica_rg.ttf') format('truetype');
+}
+
+ion-title{
+    font-family:  ParkLaneNF;
+}
+
 .active-link{
     color: var(--ion-color-success);
     ion-icon{

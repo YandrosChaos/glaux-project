@@ -1,6 +1,6 @@
 <ion-header class="ion-no-border">
     <ion-toolbar color="primary">
-      <ion-title>Paso {{position}}</ion-title>
+      <ion-title>Paso {{step.position}}</ion-title>
       <ion-buttons slot="end">
         <ion-button (click)='close()'>
           <ion-icon name="close-sharp" size="large" color="danger"></ion-icon>
@@ -13,12 +13,13 @@
     <ion-grid>
       <ion-row>
         <ion-col class="ion-text-center">
-          <ion-icon name="help-outline" style="font-size: 15rem;"></ion-icon>
+          <ion-icon  *ngIf="!step.imageLink" name="help-outline" style="font-size: 15rem;"></ion-icon>
+          <ion-img *ngIf="step.imageLink" src="{{step.imageLink}}"></ion-img>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col class="ion-text-justify">
-          {{step}}
+          <p *ngFor="let paragraph of step.paragraphs">{{paragraph}}</p>
         </ion-col>
       </ion-row>
     </ion-grid>

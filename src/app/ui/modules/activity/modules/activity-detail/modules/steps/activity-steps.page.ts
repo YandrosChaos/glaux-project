@@ -25,12 +25,11 @@ export class ActivityStepsPage implements OnInit {
     });
   }
 
-  public async presentModal(index: number, step: string): Promise<void> {
+  public async presentModal(index: number): Promise<void> {
     const modal = await this.modalController.create({
       component: ActivityStepDetailPage,
       componentProps: {
-        step: step,
-        position: index + 1
+        step: this.activity.steps[index],
       }
     });
     return await modal.present();
