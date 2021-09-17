@@ -32,7 +32,8 @@ export class ActivityPage implements OnInit, OnDestroy {
     this.isSearching = !this.isSearching;
   }
 
-  public onSearchValueChanged(item: string): void {
+  public onSearchValueChanged(event): void {
+    const item: string = event.detail.value;
     const inputValue: string = this.transformInputValue(item);
     this.filteredActivities = this.activities.filter(
       (activity: Activity) =>

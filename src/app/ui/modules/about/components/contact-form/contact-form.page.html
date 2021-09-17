@@ -11,20 +11,31 @@
   
 <ion-content class="ion-padding" color="primary">
   <div class="ion-text-center">
-    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+    <ion-icon
+    name="chatbubble-ellipses-outline"></ion-icon>
   </div>
-  <ion-item class="ion-item-border">
-    <ion-label position="floating">Nombre</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <ion-item class="ion-item-border">
-    <ion-label position="floating">Email</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
-  <ion-item class="ion-item-border">
-    <ion-textarea  rows="10" placeholder="¿Qué quieres decirnos?"></ion-textarea>
-  </ion-item>
-  <div class="ion-text-center ion-margin">
-    <ion-button color="secondary" expand="block" disabled>¡Enviar!</ion-button>
-  </div>
+  <form [formGroup]="contactForm">
+    <ion-item class="ion-item-border ion-item-padding">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName='name' type="text"></ion-input>
+    </ion-item>
+    <ion-item class="ion-item-padding">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName='email' type="email"></ion-input>
+    </ion-item>
+    <ion-item class="ion-item-padding">
+      <ion-textarea
+      formControlName='message'  
+      rows="10" 
+      placeholder="¿Qué quieres decirnos?"></ion-textarea>
+    </ion-item>
+    <div class="ion-text-center ion-margin">
+      <ion-button 
+      (click)="sendMessage(contactForm.value)"
+      color="secondary" 
+      expand="block" 
+      [disabled]='!contactForm.valid'
+      >¡Enviar!</ion-button>
+    </div>
+  </form>
 </ion-content>

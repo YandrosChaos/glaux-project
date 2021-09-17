@@ -6,7 +6,7 @@
         <ion-title *ngIf="!isSearching">Actividades</ion-title>
         <ion-searchbar *ngIf="isSearching"
         (ionCancel)="onSearchButtonTouched()"
-        (ionChange)="onSearchValueChanged($event.detail.value)"
+        (ionChange)="onSearchValueChanged($event)"
         showCancelButton="always" animated></ion-searchbar>
         <ion-buttons slot="end" *ngIf="!isSearching">
             <ion-button (click)="onSearchButtonTouched()">
