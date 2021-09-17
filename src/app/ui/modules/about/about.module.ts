@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { AboutRoutingModule } from './about-routing.module';
 import { AboutPage } from './about.page';
+import { ContactFormPage } from './components/contact-form/contact-form.page';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { AboutPage } from './about.page';
     IonicModule,
     AboutRoutingModule,
   ],
-  declarations: [AboutPage]
+  declarations: [AboutPage, ContactFormPage]
 })
 export class AboutModule {}

@@ -1,0 +1,30 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title>Contacta</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)='close()'>
+        <ion-icon name="close-sharp" size="large" color="danger"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+  
+<ion-content class="ion-padding" color="primary">
+  <div class="ion-text-center">
+    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+  </div>
+  <ion-item class="ion-item-border">
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item class="ion-item-border">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+  <ion-item class="ion-item-border">
+    <ion-textarea  rows="10" placeholder="¿Qué quieres decirnos?"></ion-textarea>
+  </ion-item>
+  <div class="ion-text-center ion-margin">
+    <ion-button color="secondary" expand="block" disabled>¡Enviar!</ion-button>
+  </div>
+</ion-content>
