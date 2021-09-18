@@ -18,7 +18,15 @@
 
 <ion-content class="card-background-page">
     <ion-card class='card' *ngFor="let activity of filteredActivities" (click)="onNavigate(activity)">
-            <div class='card-title'>{{activity.name}}</div>
+            <div class='card-title'>
+                <span 
+                [ngClass]="{
+                    'color-primary': isMultipleOf(indx, 2),
+                    'color-secondary': isMultipleOf(indx, 3)
+                }"
+                *ngFor="let char of activity.name.split(''); let indx= index"
+                >{{char}}</span>
+            </div>
             <div class='card-subtitle'>{{activity.type}}</div>
             <img class="card-img" src="{{activity.imgLink}}" alt="image">
     </ion-card>

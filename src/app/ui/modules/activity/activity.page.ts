@@ -48,6 +48,10 @@ export class ActivityPage implements OnInit, OnDestroy {
     this.router.navigate(['/activity/detail', activity.hash])
   }
 
+  public isMultipleOf(index: number, multipleOf: number): boolean {
+    return index % multipleOf === 0;
+  }
+
   ngOnDestroy() {
     this.subActivity.unsubscribe();
   }
