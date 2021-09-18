@@ -8,8 +8,8 @@ import { testData } from '../../database/test-data';
     providedIn: 'root'
 })
 export class ActivityService implements AbstractService<Activity>{
-    constructor() { }
     endpoint: string;
+    constructor() { }
 
     getById(id: string): Observable<Activity> {
         return of(testData.find((item: Activity) => item.hash === id));

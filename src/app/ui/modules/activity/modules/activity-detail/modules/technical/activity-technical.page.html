@@ -7,7 +7,10 @@
         <ion-icon name="people-outline" slot="start"></ion-icon>
     </ion-item>
     <div class='ion-padding'>
-        <p>Ambito: {{activity.type}}</p>
+        <p><b>Ambito:</b> {{activity.type}}</p>
+        <p><b>Edad Recomendada:</b> {{formattedRecommendedAges}}</p>
+        <p><b>Papel del profesor:</b> {{activity.teacherRole}}</p>
+        <ion-item-divider></ion-item-divider>
         <h3>Objetivos</h3>
         <ul>
             <li *ngFor='let objective of activity.objectives'>
