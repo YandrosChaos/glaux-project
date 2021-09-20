@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonRouterOutlet, Platform } from '@ionic/angular';
+import { Plugins } from '@capacitor/core';
+import { Platform } from '@ionic/angular';
+const { App } = Plugins;
 
 @Component({
   selector: 'app-root',
@@ -9,11 +11,11 @@ import { IonRouterOutlet, Platform } from '@ionic/angular';
 export class AppComponent {
   constructor(
     private platform: Platform,
-    private routerOutlet: IonRouterOutlet,
   ) {
     this.platform.backButton.subscribeWithPriority(-1, () => {
-      if (!this.routerOutlet.canGoBack()) {
-        navigator['app'].exitApp();
+      if (true) {
+        console.log("hello there")
+        App.exitApp();
       }
     });
   }

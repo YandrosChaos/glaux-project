@@ -10,20 +10,22 @@ export class ActivityResumePage implements OnInit, OnDestroy {
   public activity: Activity;
 
   constructor(
-    private router:Router,
+    private router: Router,
     private activatedRoute: ActivatedRoute,
-  ) { 
+  ) {
   }
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
-      if (this.router.getCurrentNavigation().extras.state) {
+      if (this.router.getCurrentNavigation()?.extras?.state?.activity) {
         this.activity = this.router.getCurrentNavigation().extras.state.activity;
+      } else {
+        this.router.navigate(["/activity"])
       }
     });
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
   }
 
 }

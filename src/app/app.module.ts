@@ -12,9 +12,10 @@ import { ActivityService } from './data/services/activity/activity.service';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  exports: [],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    ActivityService
+    ActivityService,
   ],
   bootstrap: [AppComponent],
 })
