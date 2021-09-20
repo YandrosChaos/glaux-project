@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ModalController } from '@ionic/angular';
+import { ModalController, ToastController } from '@ionic/angular';
 import { Message } from '../../../../../data/interfaces/message/message.interface';
 
 @Component({
@@ -12,6 +12,7 @@ export class ContactFormPage implements OnInit {
   public contactForm: FormGroup;
 
   constructor(
+    private toastController: ToastController,
     private modalController: ModalController,
     private formBuilder: FormBuilder,
   ) { }
@@ -30,8 +31,20 @@ export class ContactFormPage implements OnInit {
 
   public sendMessage(message: Message): void {
     if (this.contactForm.valid) {
+      this.presentToast();
       console.log(message);
+      this.close();
     }
+  }
+
+  private async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Mensaje enviado =)',
+      duration: 2000,
+      color: "secondary",
+      cssClass:"ion-text-center",
+    });
+    toast.present();
   }
 
   public async close(): Promise<void> {
